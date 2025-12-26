@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - Matcha Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <header class="cart-header">
+        <div class="brand-header">
+            <a href="index.html" class="logo-link">
+                <h1>HINATFU</h1>
+                <span class="subtitle">まっちゃ</span>
+            </a>
+        </div>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Tiếp tục mua sắm</a>
+    </header>
+
+    <div class="cart-wrapper">
+        <h2 class="page-title">Giỏ hàng của bạn</h2>
+
+        <div class="cart-container">
+            <div class="cart-items">
+                
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1515810397858-22006f7f6a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Matcha Latte">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Matcha Đài sữa Meiji</h3>
+                        <p class="item-desc">Size M • 50% Đường • Ít đá</p>
+                        <div class="item-price" data-price="65000">65.000đ</div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <button class="btn-qty minus"><i class="fas fa-minus"></i></button>
+                            <input type="text" value="1" readonly>
+                            <button class="btn-qty plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="btn-remove"><i class="far fa-trash-alt"></i></button>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image">
+                         <img src="https://images.unsplash.com/photo-1582791694770-cbd851505312?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Matcha Cake">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Matcha Haru sữa hạt Oatside</h3>
+                        <p class="item-desc">Size L • Sữa yến mạch</p>
+                        <div class="item-price" data-price="85000">85.000đ</div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <button class="btn-qty minus"><i class="fas fa-minus"></i></button>
+                            <input type="text" value="2" readonly>
+                            <button class="btn-qty plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="btn-remove"><i class="far fa-trash-alt"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <h3>Cộng giỏ hàng</h3>
+                    <div class="summary-row">
+                        <span>Tạm tính</span>
+                        <span id="subtotal">0đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển</span>
+                        <span>Miễn phí</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="summary-row total">
+                        <span>Tổng cộng</span>
+                        <span id="total-price">0đ</span>
+                    </div>
+                    <button class="btn-checkout">Thanh toán ngay</button>
+                    <p class="secure-note"><i class="fas fa-shield-alt"></i> Bảo mật thanh toán 100%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

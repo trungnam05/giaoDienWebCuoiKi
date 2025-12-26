@@ -1,0 +1,326 @@
+/* --- CÀI ĐẶT CƠ BẢN --- */
+:root {
+    --primary-green: #3A5A40;
+    --light-green: #588157;
+    --bg-cream: #FAF9F4;
+    --white: #FFFFFF;
+    --text-dark: #1A1A1A;
+    --text-grey: #666666;
+    --border-color: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+/* --- LOGO BRAND HEADER (Đã thêm lại theo yêu cầu) --- */
+.brand-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.brand-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-green);
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 1;
+}
+
+.brand-header .subtitle {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* --- TYPOGRAPHY --- */
+h2.form-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span.instruction {
+    font-size: 12px;
+    color: var(--text-grey);
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+a {
+    color: var(--text-dark);
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+/* --- CONTAINER CHÍNH --- */
+.container {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.05), 
+                0 10px 10px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+    width: 800px; /* Giảm chiều rộng một chút cho gọn vì ít nội dung hơn */
+    max-width: 100%;
+    min-height: 500px; /* Giảm chiều cao một chút */
+}
+
+/* --- FORM --- */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+form {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+/* Input Fields */
+input {
+    background-color: #FAFAFA;
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s;
+}
+
+input:focus {
+    background-color: #fff;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(58, 90, 64, 0.1);
+}
+
+/* --- BUTTONS --- */
+button {
+    border-radius: 30px; /* Bo tròn viên thuốc */
+    border: 1px solid var(--primary-green);
+    background-color: var(--primary-green);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in, background-color 0.3s;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+    background-color: #29402d; /* Màu đậm hơn khi hover */
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+button.ghost:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* --- ANIMATION LOGIC (Giữ nguyên) --- */
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+/* --- OVERLAY --- */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: var(--primary-green);
+    /* Gradient nhẹ để tạo chiều sâu */
+    background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+/* ... Các code cũ giữ nguyên ... */
+
+/* --- STYLE CHO PHẦN THÔNG BÁO THÀNH CÔNG --- */
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(58, 90, 64, 0.2);
+}
+
+.btn-home {
+    text-decoration: none; /* Bỏ gạch chân của thẻ a */
+    margin: 0;
+}
+/* Thêm mới vào login.css */
+.form-content {
+    display: flex;
+    flex-direction: column; /* Xếp dọc các phần tử */
+    align-items: center;    /* Căn giữa */
+    width: 100%;            /* Chiếm trọn chiều rộng */
+}
+
+/* Hiệu ứng hiện dần */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ẩn hiện nội dung (Class tiện ích) */
+.hidden {
+    display: none !important;
+}

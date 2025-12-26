@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komorebi Matcha - Tinh hoa trà Nhật</title>
+    <script src="https://kit.fontawesome.com/41b883a0ca.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-left">
+            <a href="#trangchu" class="logo">
+                <h1>HINATFU<span>まっちゃ</span></h1>
+            </a>
+        </nav>
+
+        <nav class="nav-center">
+            <a href="#gioi-thieu">Giới thiệu</a>
+            <a href="#noi-bat">Nổi bật</a>
+            <a href="#san-pham">Sản phẩm</a>
+            <a href="#nguyen-lieu">Nguyên liệu</a>
+            <a href="#lien-he">Liên hệ</a>
+        </nav>
+
+        <nav class="nav-right">
+            <a href="./cart.html" class="icon-btn"><i class="fas fa-shopping-basket"></i></a>
+            <a href="login.html" class="icon-btn"><i class="fa-solid fa-user-ninja"></i></a>
+        </nav>
+    </header>
+
+    <section id="trangchu" class="hero-section">
+        <div class="background-container">
+            <img src="./br.png" alt="Matcha Background" />
+            <div class="hero-text">
+                <h2>Tĩnh lặng trong từng ngụm trà</h2>
+                <p>Trải nghiệm hương vị Uji truyền thống giữa lòng thành phố.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gioi-thieu" class="section-container about">
+        <div class="section-title">
+            <span>Giới thiệu</span>
+            <h2>Về chúng tôi</h2>
+        </div>
+        <div class="about-content">
+            <p>Chúng tôi mang đến dòng Matcha thượng hạng từ vùng Uji, Kyoto - nơi có lịch sử trà đạo lâu đời nhất Nhật Bản.</p>
+            <p>Mỗi chén trà là một sự kết hợp giữa nghệ thuật pha chế và sự tĩnh lặng của tâm hồn.</p>
+        </div>
+    </section>
+
+    <section id="noi-bat" class="section-container menu">
+        <div class="section-title">
+            <span>Gợi ý</span>
+            <h2>Sản phẩm nổi bật</h2>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" 
+            data-product-id="drink_matcha_dai_meiji"
+            data-price="65000">
+                <div class="product-img">
+                    <img src="./SanPhamImage/MatchaDaiSuaTuoi.png" alt="Matcha Đài" />
+                </div>
+                <div class="product-info">
+                    <h3>Matcha Đài sữa Meiji</h3>
+                    <p>Matcha thanh khiết, sữa Meiji mượt mà, hậu vị dịu êm.</p>
+                    <div class="price-add">
+                        <span>65.000đ</span>
+                        <button class="add-btn">Thêm +</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card"
+            data-product-id="drink_matcha_uji_gau"
+            data-price="75000">
+                <div class="product-img">
+                    <img src="./SanPhamImage/MatchaHaruSuaOatside.png" alt="Matcha Haru" />
+                </div>
+                <div class="product-info">
+                    <h3>Matcha Haru sữa hạt Oatside</h3>
+                    <p>Trà xuân Haru thanh tao, yến mạch bùi béo, thuần khiết.</p>
+                    <div class="price-add">
+                        <span>85.000đ</span>
+                        <button class="add-btn">Thêm +</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card"
+            data-product-id="drink_matcha_fuji_mk4_oatside"
+            data-price="60000">
+                <div class="product-img">
+                    <img src="./SanPhamImage/MatchaFujiMk4SuaOatSide.png" alt="Matcha Fuji Mk4" />
+                </div>
+                <div class="product-info">
+                    <h3>Matcha Fuji Mk4 sữa hạt Oatside</h3>
+                    <p>Vị trà rang mộc mạc, đậm đà, quyện cùng sữa hạt sánh mịn.</p>
+                    <div class="price-add">
+                        <span>60.000đ</span>
+                        <button class="add-btn">Thêm +</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>  
+    </section>
+   
+    <section id="san-pham" class="section-container custom-selection">
+        <div class="section-title">
+            <span>Sáng tạo</span>
+            <h2>Tùy chỉnh Matcha của bạn</h2>
+        </div>
+        
+        <div class="selection-container">
+            <div class="selection-frame" data-category="matcha">
+                <h3><i class="fas fa-leaf"></i> 1. Chọn loại Matcha</h3>
+                <div class="option-list">
+                    <div class="option-item" data-value="matcha_taiwan">
+                        <img src="./matchaImage/Dai.png" alt="Matcha Đài">
+                        <div class="option-text">
+                            <h4>Matcha Đài Loan</h4>
+                            <p>Vị trà thanh mát, nhẹ nhàng.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="matcha_uji">
+                        <img src="./matchaImage/Uji.png" alt="Matcha Uji">
+                        <div class="option-text">
+                            <h4>Matcha Uji Cao Cấp</h4>
+                            <p>Tinh hoa Kyoto đậm đà Umami.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="matcha_haru">
+                        <img src="./matchaImage/Haru.png" alt="Matcha Haru">
+                        <div class="option-text">
+                            <h4>Matcha Haru</h4>
+                            <p>Hương cỏ non tươi mới.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="matcha_fuji_03">
+                        <img src="./matchaImage/Fuji03.png" alt="Matcha Fuji 03">
+                        <div class="option-text">
+                            <h4>Matcha Fuji No.03</h4>
+                            <p>Màu xanh thẫm, vị mạnh mẽ.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="matcha_fuji_Mk4">
+                        <img src="./matchaImage/FujiMk4.png" alt="Matcha Fuji Mk4">
+                        <div class="option-text">
+                            <h4>Matcha Fuji Mk4</h4>
+                            <p>Sự cân bằng hoàn hảo giữa vị chát nhẹ và hương trà rang đặc trưng.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="matcha_Houjicha">
+                        <img src="./matchaImage/Houjicha.png" alt="Matcha Houjicha">
+                        <div class="option-text">
+                            <h4>Matcha Houjicha</h4>
+                            <p>Trà rang thơm lừng mùi khói, ít cafein, thích hợp cho buổi tối.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selection-frame" data-category="milk">
+                <h3><i class="fas fa-water"></i> 2. Chọn loại Sữa</h3>
+                <div class="option-list">
+                    <div class="option-item" data-value="milk_fresh">
+                        <img src="./milkImage/SuaTuoi.png" alt="Sữa Tươi">
+                        <div class="option-text">
+                            <h4>Sữa Tươi Thanh Trùng</h4>
+                            <p>Vị kem béo tự nhiên.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="milk_oatside">
+                        <img src="./milkImage/SuaHatOatside.png" alt="Sữa Oatside">
+                        <div class="option-text">
+                            <h4>Sữa Yến Mạch Oatside</h4>
+                            <p>Lựa chọn thuần chay hoàn hảo.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="milk_gau">
+                        <img src="./milkImage/SuaGau.png" alt="Sữa Gấu">
+                        <div class="option-text">
+                            <h4>Sữa Tươi Gấu</h4>
+                            <p>Đậm đặc, ít béo, mang lại cảm giác hoài niệm và thanh tao.</p>
+                        </div>
+                    </div>
+                    <div class="option-item" data-value="milk_meiji">
+                        <img src="./milkImage/SuaMeiji.png" alt="Sữa Meiji">
+                        <div class="option-text">
+                            <h4>Sữa Tươi Meiji</h4>
+                            <p>Tiêu chuẩn Nhật Bản mịn màng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selection-frame" data-category="size">
+                <h3><i class="fas fa-expand-alt"></i> 3. Chọn Size</h3>
+                <div class="size-list">
+                    <div class="size-item" data-value="size_s">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <span>Size S (180ml)</span>
+                    </div>
+                    <div class="size-item active" data-value="size_l">
+                        <i class="fa-solid fa-mug-hot" style="font-size: 1.4em;"></i>
+                        <span>Size L (350ml)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <button id="confirm-custom" class="add-btn" style="padding: 15px 40px; font-size: 18px;">
+                Thêm vào giỏ hàng ngay <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== MATCHA NGUYÊN LIỆU BÁN LẺ ===== -->
+    <section id="nguyen-lieu" class="section-container ingredients">
+
+    <div class="section-title">
+        <span>Nguyên liệu</span>
+        <h2>Bột Matcha Nhật Bản</h2>
+    </div>
+
+    <div class="matcha-two-columns">
+
+        <!-- MATCHA ĐÀI -->
+        <div class="ingredient-card"
+        data-product-id="matcha_taiwan"
+        data-price-per-gram="600">
+        <img src="./matchaImage/Dai.png" alt="Matcha Đài">
+        <div class="ingredient-content">
+            <h4>Matcha Đài Loan</h4>
+            <p>Vị trà nhẹ, thanh mát, dễ uống cho người mới.</p>
+
+            <!-- GIÁ -->
+            <div class="price-info">
+            <span class="price-per-gram">600đ / g</span>
+            <span class="total-price">Tổng: 60.000đ</span>
+            </div>
+
+            <!-- CHỌN GRAM -->
+            <div class="quantity-box">
+            <label>Số lượng (g)</label>
+            <input type="number" min="10" step="10" value="50">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ mạnh</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Độ đắng</span><div class="bar" style="--value:1"></div></div>
+            <div class="stat"><span>Màu sắc</span><div class="bar" style="--value:3"></div></div>
+            <div class="stat"><span>Hương thơm</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Cafeine</span><div class="bar" style="--value:2"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- MATCHA UJI -->
+        <div class="ingredient-card"
+        data-product-id="matcha_uji"
+        data-price-per-gram="1200">
+        <img src="./matchaImage/Uji.png" alt="Matcha Uji">
+        <div class="ingredient-content">
+            <h4>Matcha Uji Cao Cấp</h4>
+            <p>Tinh hoa Kyoto, vị umami đậm đà, hậu ngọt sâu.</p>
+            
+            <!-- GIÁ -->
+            <div class="price-info">
+            <span class="price-per-gram">1.200đ / g</span>
+            <span class="total-price">Tổng: 60.000đ</span>
+            </div>
+
+            <!-- CHỌN GRAM -->
+            <div class="quantity-box">
+            <label>Số lượng (g)</label>
+            <input type="number" min="10" step="10" value="50">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ mạnh</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Độ đắng</span><div class="bar" style="--value:3"></div></div>
+            <div class="stat"><span>Màu sắc</span><div class="bar" style="--value:5"></div></div>
+            <div class="stat"><span>Hương thơm</span><div class="bar" style="--value:5"></div></div>
+            <div class="stat"><span>Cafeine</span><div class="bar" style="--value:4"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- MATCHA HARU -->
+        <div class="ingredient-card"
+        data-product-id="matcha_haru"
+        data-price-per-gram="900">
+        <img src="./matchaImage/Haru.png" alt="Matcha Haru">
+        <div class="ingredient-content">
+            <h4>Matcha Haru</h4>
+            <p>Hương cỏ non tươi mới, vị dịu nhẹ.</p>
+
+            <!-- GIÁ -->
+            <div class="price-info">
+            <span class="price-per-gram">900đ / g</span>
+            <span class="total-price">Tổng: 60.000đ</span>
+            </div>
+
+            <!-- CHỌN GRAM -->
+            <div class="quantity-box">
+            <label>Số lượng (g)</label>
+            <input type="number" min="10" step="10" value="50">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ mạnh</span><div class="bar" style="--value:3"></div></div>
+            <div class="stat"><span>Độ đắng</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Màu sắc</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Hương thơm</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Cafeine</span><div class="bar" style="--value:3"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- MATCHA FUJI 03 -->
+        <div class="ingredient-card"
+        data-product-id="matcha_fuji_03"
+        data-price-per-gram="1100">
+        <img src="./matchaImage/Fuji03.png" alt="Matcha Fuji 03">
+        <div class="ingredient-content">
+            <h4>Matcha Fuji No.03</h4>
+            <p>Màu xanh đậm, vị mạnh mẽ, hậu trà rõ.</p>
+
+            <!-- GIÁ -->
+            <div class="price-info">
+            <span class="price-per-gram">1.100đ / g</span>
+            <span class="total-price">Tổng: 60.000đ</span>
+            </div>
+
+            <!-- CHỌN GRAM -->
+            <div class="quantity-box">
+            <label>Số lượng (g)</label>
+            <input type="number" min="10" step="10" value="50">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ mạnh</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Độ đắng</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Màu sắc</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Hương thơm</span><div class="bar" style="--value:3"></div></div>
+            <div class="stat"><span>Cafeine</span><div class="bar" style="--value:4"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- MATCHA FUJI MK4 -->
+        <div class="ingredient-card"
+        data-product-id="matcha_fuji_Mk4"
+        data-price-per-gram="1500">
+        <img src="./matchaImage/FujiMk4.png" alt="Matcha Fuji Mk4">
+        <div class="ingredient-content">
+            <h4>Matcha Fuji Mk4</h4>
+            <p>Dòng cao cấp, vị trà đậm sâu, giàu năng lượng.</p>
+
+            <!-- GIÁ -->
+            <div class="price-info">
+            <span class="price-per-gram">1.500đ / g</span>
+            <span class="total-price">Tổng: 60.000đ</span>
+            </div>
+
+            <!-- CHỌN GRAM -->
+            <div class="quantity-box">
+            <label>Số lượng (g)</label>
+            <input type="number" min="10" step="10" value="50">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ mạnh</span><div class="bar" style="--value:5"></div></div>
+            <div class="stat"><span>Độ đắng</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Màu sắc</span><div class="bar" style="--value:5"></div></div>
+            <div class="stat"><span>Hương thơm</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Cafeine</span><div class="bar" style="--value:5"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- HOUJICHA -->
+        <div class="ingredient-card"
+        data-product-id="matcha_Houjicha"
+        data-price-per-gram="700">
+        <img src="./matchaImage/Houjicha.png" alt="Houjicha">
+        <div class="ingredient-content">
+            <h4>Houjicha</h4>
+            <p>Trà rang thơm mùi khói, rất ít cafeine.</p>
+
+            <!-- GIÁ -->
+            <div class="price-info">
+            <span class="price-per-gram">700đ / g</span>
+            <span class="total-price">Tổng: 60.000đ</span>
+            </div>
+
+            <!-- CHỌN GRAM -->
+            <div class="quantity-box">
+            <label>Số lượng (g)</label>
+            <input type="number" min="10" step="10" value="50">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ mạnh</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Độ đắng</span><div class="bar" style="--value:1"></div></div>
+            <div class="stat"><span>Màu sắc</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Hương thơm</span><div class="bar" style="--value:5"></div></div>
+            <div class="stat"><span>Cafeine</span><div class="bar" style="--value:1"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+
+     <!-- ===== SỮA NGUYÊN LIỆU BÁN LẺ ===== -->
+    <section class="section-container ingredients">
+
+    <div class="section-title">
+        <span>Nguyên liệu</span>
+        <h2>Sữa & Milk Base</h2>
+    </div>
+
+    <div class="matcha-two-columns">
+
+        <!-- SỮA TƯƠI -->
+        <div class="ingredient-card"
+        data-product-id="milk_fresh"
+        data-price-per-gram="150">
+        <img src="./milkImage/SuaTuoi.png" alt="Sữa tươi">
+        <div class="ingredient-content">
+            <h4>Sữa tươi</h4>
+            <p>Vị sữa tự nhiên, nhẹ, làm nền cho matcha.</p>
+
+            <div class="price-info">
+            <span class="price-per-gram">150đ / ml</span>
+            <span class="total-price">Tổng: 1.500đ</span>
+            </div>
+
+            <div class="quantity-box">
+            <label>Số lượng (ml)</label>
+            <input type="number" min="50" step="50" value="100">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ béo</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Vị ngọt</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Hương vị</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Độ sánh</span><div class="bar" style="--value:2"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- SỮA MEIJI -->
+        <div class="ingredient-card"
+        data-product-id="milk_meiji"
+        data-price-per-gram="180">
+        <img src="./milkImage/SuaMeiji.png" alt="Sữa Meiji">
+        <div class="ingredient-content">
+            <h4>Sữa Meiji</h4>
+            <p>Sữa Nhật béo nhẹ, hậu ngọt dịu.</p>
+
+            <div class="price-info">
+            <span class="price-per-gram">180đ / ml</span>
+            <span class="total-price">Tổng: 1.800đ</span>
+            </div>
+
+            <div class="quantity-box">
+            <label>Số lượng (ml)</label>
+            <input type="number" min="50" step="50" value="100">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ béo</span><div class="bar" style="--value:3"></div></div>
+            <div class="stat"><span>Vị ngọt</span><div class="bar" style="--value:3"></div></div>
+            <div class="stat"><span>Hương vị</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Độ sánh</span><div class="bar" style="--value:3"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- SỮA GẤU -->
+        <div class="ingredient-card"
+        data-product-id="milk_gau"
+        data-price-per-gram="200">
+        <img src="./milkImage/SuaGau.png" alt="Sữa Gấu">
+        <div class="ingredient-content">
+            <h4>Sữa Gấu</h4>
+            <p>Béo đậm, ngọt rõ, hợp matcha mạnh.</p>
+
+            <div class="price-info">
+            <span class="price-per-gram">200đ / ml</span>
+            <span class="total-price">Tổng: 2.000đ</span>
+            </div>
+
+            <div class="quantity-box">
+            <label>Số lượng (ml)</label>
+            <input type="number" min="50" step="50" value="100">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ béo</span><div class="bar" style="--value:5"></div></div>
+            <div class="stat"><span>Vị ngọt</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Hương vị</span><div class="bar" style="--value:4"></div></div>
+            <div class="stat"><span>Độ sánh</span><div class="bar" style="--value:4"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+        <!-- SỮA HẠT OATSIDE -->
+        <div class="ingredient-card"
+        data-product-id="milk_oatside"
+        data-price-per-gram="220">
+        <img src="./milkImage/SuaHatOatside.png" alt="Sữa Oatside">
+        <div class="ingredient-content">
+            <h4>Sữa hạt Oatside</h4>
+            <p>Ít ngọt, béo mịn, hương yến mạch.</p>
+
+            <div class="price-info">
+            <span class="price-per-gram">220đ / ml</span>
+            <span class="total-price">Tổng: 2.200đ</span>
+            </div>
+
+            <div class="quantity-box">
+            <label>Số lượng (ml)</label>
+            <input type="number" min="50" step="50" value="100">
+            </div>
+
+            <div class="stats">
+            <div class="stat"><span>Độ béo</span><div class="bar" style="--value:3"></div></div>
+            <div class="stat"><span>Vị ngọt</span><div class="bar" style="--value:2"></div></div>
+            <div class="stat"><span>Hương vị</span><div class="bar" style="--value:5"></div></div>
+            <div class="stat"><span>Độ sánh</span><div class="bar" style="--value:4"></div></div>
+            </div>
+
+            <button class="add-btn">Thêm vào giỏ</button>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+
+
+    <footer id="lien-he" class="contact section-container">
+        <div class="section-title">
+            <span>Kết nối</span>
+            <h2>Liên hệ với chúng tôi</h2>
+        </div>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 123 Đường Uji, Quận 1, TP. Hồ Chí Minh</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+
+    <!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        /* ===============================
+        1. CUSTOM MATCHA (PHA SẴN)
+        =============================== */
+
+        const userOrder = {
+            matcha_id: null,
+            milk_id: null,
+            size_id: "size_l" // mặc định
+        };
+
+        function setupSelection(selector) {
+            document.querySelectorAll(selector).forEach(item => {
+                item.addEventListener('click', function () {
+                    const frame = this.closest('.selection-frame');
+                    const category = frame.dataset.category;
+                    const value = this.dataset.value;
+
+                    // UI
+                    frame.querySelectorAll(selector).forEach(el => el.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // DATA
+                    if (category === 'matcha') userOrder.matcha_id = value;
+                    if (category === 'milk') userOrder.milk_id = value;
+                    if (category === 'size') userOrder.size_id = value;
+
+                    console.log("STATE CUSTOM MATCHA:", userOrder);
+                });
+            });
+        }
+
+        setupSelection('.option-item');
+        setupSelection('.size-item');
+
+        document.getElementById('confirm-custom').addEventListener('click', function () {
+            if (!userOrder.matcha_id || !userOrder.milk_id || !userOrder.size_id) {
+                alert("Vui lòng chọn đầy đủ Matcha – Sữa – Size");
+                return;
+            }
+
+            const payload = {
+                product_type: "custom_matcha",
+                ...userOrder,
+                quantity: 1
+            };
+
+            console.log("GỬI BACKEND (CUSTOM MATCHA):", payload);
+            alert("Custom matcha đã được ghi nhận (xem Console)");
+        });
+
+
+        /* ===============================
+        2. NGUYÊN LIỆU LẺ (MATCHA / SỮA)
+        ⚠️ YÊU CẦU HTML CÓ:
+        data-product-id
+        data-price-per-gram (hoặc ml)
+        =============================== */
+
+        document.querySelectorAll('.ingredient-card').forEach(card => {
+
+            const productId = card.dataset.productId;
+            const pricePerUnit = parseInt(card.dataset.pricePerGram);
+
+            if (!productId || isNaN(pricePerUnit)) return;
+
+            const input = card.querySelector('input[type="number"]');
+            const totalPriceEl = card.querySelector('.total-price');
+            const addBtn = card.querySelector('.add-btn');
+            const name = card.querySelector('h4').innerText;
+
+            function updatePrice() {
+                const qty = parseInt(input.value);
+                const total = qty * pricePerUnit;
+                totalPriceEl.textContent = "Tổng: " + total.toLocaleString() + "đ";
+            }
+
+            input.addEventListener('input', updatePrice);
+            updatePrice();
+
+            addBtn.addEventListener('click', () => {
+                const qty = parseInt(input.value);
+
+                const orderItem = {
+                    product_type: "ingredient",
+                    product_id: productId,
+                    product_name: name,
+                    quantity: qty,
+                    unit_price: pricePerUnit,
+                    total_price: qty * pricePerUnit
+                };
+
+                console.log("GỬI BACKEND (NGUYÊN LIỆU):", orderItem);
+                alert("Đã thêm vào giỏ: " + name);
+            });
+        });
+
+    });
+    /* ===============================
+   3. SẢN PHẨM NỔI BẬT (PHA SẴN)
+    =============================== */
+
+    document.querySelectorAll('.product-card .add-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            const card = this.closest('.product-card');
+
+            const orderItem = {
+                product_type: "drink",
+                product_id: card.dataset.productId,
+                product_name: card.querySelector('h3').innerText,
+                unit_price: parseInt(card.dataset.price),
+                quantity: 1,
+                total_price: parseInt(card.dataset.price)
+            };
+
+            console.log("GỬI BACKEND (SẢN PHẨM NỔI BẬT):", orderItem);
+            alert("Đã thêm vào giỏ: " + orderItem.product_name);
+        });
+    });
+
+    </script> -->
+
+    
+</body>
+</html>
