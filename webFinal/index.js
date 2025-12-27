@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const item = {
         id: card.dataset.productId,
         name: card.querySelector("h4").innerText,
-        desc: `Nguyên liệu: ${qty}g/ml`,
+        desc: `Nguyên liệu: ${qty}g`,
         price: pricePerUnit * qty, // Giá này là giá tổng của gói nguyên liệu đó
         // Lưu ý: Trong giỏ hàng, ta coi đây là 1 gói giá (price), số lượng (quantity) là 1
         // Hoặc bạn có thể để đơn giá lẻ và quantity là số gram.
